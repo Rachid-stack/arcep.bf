@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<!--
+Template name: Nova
+Template author: FreeBootstrap.net
+Author website: https://freebootstrap.net/
+License: https://freebootstrap.net/license
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ACEP – La réussite à portée de main</title>
+    <meta name="description" content="ACEP Burkina, votre partenaire financier de proximité pour les micro, petites et moyennes entreprises. Des solutions de financement adaptées à vos besoins.">
+    <meta name="keywords" content="ACEP, microfinance, crédit, Burkina Faso, PME, entrepreneurs, services financiers">
+    <meta name="author" content="FreeBootstrap.net">
+
+    <meta name="theme-color" content="#ffffff">
+   
+    <link rel="icon" href="assets/images/logo/logo-petit.png" type="image/png">
+    <!-- ======= Google Font =======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+    <!-- End Google Font-->
+    
+    <!-- ======= Styles =======-->
+    <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+    <!-- End Styles-->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- ======= Theme Style =======-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- End Theme Style-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- ======= Apply theme =======-->
+    <script>
+      // Apply the theme as early as possible to avoid flicker
+      (function() {
+      const storedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-bs-theme', storedTheme);
+      })();
+    </script>
+  </head>
+  <body>
+    
+    
+    <!-- ======= Site Wrap =======-->
+    <div class="site-wrap">
+          <!-- Subheader (inclus juste après le <header>) -->
+    <div class="subheader bg-dark text-white py-1">
+      <div class="container d-flex flex-wrap align-items-center justify-content-between">
+        <div class="subheader-agences small">
+          Nos agences : Ouagadougou &nbsp;|&nbsp; Bobo-Dioulasso &nbsp;|&nbsp; Koudougou &nbsp;|&nbsp; Kaya &nbsp;|&nbsp; Ouahigouya
+        </div>
+        <div class="subheader-contact small">
+          Tel : +226 25 41 49 31 &nbsp;|&nbsp; Lun-Ven : 7h30 – 16h &nbsp;|&nbsp; Email : contact@acep-bf.com
+        </div>
+      </div>
+    </div>
+
+      
+      <!-- ======= Header =======-->
+      <header class="fbs__net-navbar navbar navbar-expand-lg dark" aria-label="Navigation principale ACEP Burkina">
+        <div class="container d-flex align-items-center justify-content-between">
+          
+          <!-- Logo -->
+          <a class="navbar-brand w-auto" href="index.html" aria-label="ACEP Burkina Accueil">
+            <!-- logo dark -->
+            <img class="logo dark img-fluid" src="assets/images/logo/log_acep_2.png" alt="Logo ACEP Burkina" width="150">
+            <!-- logo light -->
+            <img class="logo light img-fluid" src="assets/images/logo/log_acep_2.png" alt="Logo ACEP Burkina" width="150">
+          </a>
+          <!-- End Logo -->
+          
+          <!-- Menu offcanvas -->
+          <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1" aria-labelledby="fbs__net-navbarsLabel">
+            <div class="offcanvas-header">
+              <div class="offcanvas-header-logo">
+                <a class="logo-link" id="fbs__net-navbarsLabel" href="index.html">
+                  <img class="logo dark img-fluid" src="assets/images/logo/log_acep_2.png" width="150" alt="Logo ACEP Burkina">
+                  <img class="logo light img-fluid" src="assets/images/logo/log_acep_2.png" width="150" alt="Logo ACEP Burkina">
+                </a>
+              </div>
+              <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas" aria-label="Fermer le menu"></button>
+            </div>
+            
+            <div class="offcanvas-body align-items-lg-center">
+              <ul class="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link scroll-link active" aria-current="page" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#about">À propos</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#services">Produits & Services</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#simulateur-credit">Simulateurs</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#actualites">Actualités</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#carrieres">Carrières</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End offcanvas -->
+          
+          <!-- Bouton d'action et menu mobile -->
+          <div class="ms-auto w-auto">
+            <div class="header-social d-flex align-items-center gap-1">
+              <a class="btn btn-primary py-2" href="#simulateur-credit">Simuler un crédit</a>
+              
+              <button class="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto" 
+                      data-bs-toggle="offcanvas" data-bs-target="#fbs__net-navbars" 
+                      aria-controls="fbs__net-navbars" aria-label="Ouvrir le menu" aria-expanded="false">
+                <svg class="fbs__net-icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="21" x2="3" y1="6" y2="6"></line>
+                  <line x1="15" x2="3" y1="12" y2="12"></line>
+                  <line x1="17" x2="3" y1="18" y2="18"></line>
+                </svg>
+                <svg class="fbs__net-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- End Header-->
+      
+      <!-- ======= Main =======-->
+      <main>
+        <!-- Slider -->
+        <div class="max-w-6xl mx-auto py-5">
+          <div class="swiper rounded-2xl shadow-lg overflow-hidden">
+            <div class="swiper-wrapper">
+              
+              <!-- Slide 1 -->
+              <div class="swiper-slide relative">
+                <img src="assets/images/slider1.jpg" class="w-full h-[500px] object-cover" alt="La réussite à portée de main">
+                <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
+                  <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:rgb(220, 253, 217)">La réussite à portée de main</h2>
+                  <p class="text-lg md:text-xl mb-6" style="color:white">
+                    ACEP Burkina vous accompagne avec des solutions financières solides et accessibles.
+                  </p>
+                  <a href="apropos.html" class="bg-yellow-500 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400">
+                    En savoir plus
+                  </a>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide relative">
+                <img src="assets/images/slider2.jpg" class="w-full h-[500px] object-cover" alt="Simulez vos projets">
+                <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
+                  <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:rgb(220, 253, 217)">Simulez vos projets</h2>
+                  <p class="text-lg md:text-xl mb-6" style="color:aliceblue" >
+                    Estimez vos mensualités de crédit ou les gains d’un dépôt à terme en quelques clics.
+                  </p>
+                  <a href="simulateurs.html" class="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-400">
+                    Simuler maintenant
+                  </a>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide relative">
+                <img src="assets/images/slider3.jpg" class="w-full h-[500px] object-cover" alt="Epargnez avec DAT">
+                <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
+                  <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:rgb(220, 253, 217)">Épargnez avec DAT sécurisé</h2>
+                  <p class="text-lg md:text-xl mb-6" style="color:aliceblue">
+                    Profitez de nos offres de dépôt à terme avec des rendements transparents et sûrs.
+                  </p>
+                  <a href="produits.html#epargne" class="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-400">
+                    Voir l’épargne
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            
+          </div>
+        </div>
+
+        <!-- ======= Hero =======-->
+        <section class="hero__v6 section" id="home">
+          <div class="container">
+            <div class="row">
+              <!-- Texte principal -->
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="row">
+                  <div class="col-lg-11">
+                    <span class="hero-subtitle text-uppercase" data-aos="fade-up" data-aos-delay="0">
+                      Votre partenaire financier de proximité
+                    </span>
+                    <h1 class="hero-title mb-3" data-aos="fade-up" data-aos-delay="100">
+                      Des solutions de financement adaptées à vos besoins
+                    </h1>
+                    <p class="hero-description mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">
+                      ACEP Burkina accompagne les entrepreneurs, commerçants et particuliers avec des produits financiers flexibles et un suivi personnalisé.
+                    </p>
+                    
+                    <!-- Boutons CTA -->
+                    <div class="cta d-flex gap-2 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="300">
+                      <a class="btn" href="#simulateur-credit">Simuler un crédit</a>
+                      <a class="btn btn-white-outline" href="#produits">
+                        Découvrir nos produits 
+                        <svg class="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="18" height="18" 
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+                            stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M7 7h10v10"></path>
+                          <path d="M7 17 17 7"></path>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <!-- Logos de confiance -->
+                    <div class="logos mb-4" data-aos="fade-up" data-aos-delay="400">
+                      <span class="logos-title text-uppercase mb-4 d-block">
+                        Partenaire de confiance au Burkina Faso
+                      </span>
+                      <div class="logos-images d-flex gap-4 align-items-center">
+                        <img class="img-fluid" src="assets/images/partenaires/FMO_Logo.jpg" alt="Partenaire 1" style="width: 110px;">
+                        <img class="img-fluid" src="assets/images/partenaires/fr-eib-logogroup.png" alt="Partenaire 2" style="width: 80px;">
+                        <img class="img-fluid" src="assets/images/partenaires/SYMBIOTICS.png" alt="Partenaire 3" style="width: 110px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image Hero -->
+              <div class="col-lg-6">
+                <div class="hero-img">
+                 
+                  <img class="img-main img-fluid rounded-4" src="assets/images/banquing.jpg" alt="Client ACEP satisfait" data-aos="fade-in" data-aos-delay="500">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Hero-->
+
+        
+        
+        <!-- ======= About =======-->
+        <section class="about__v4 section" id="about">
+          <div class="container">
+            <div class="row">
+              <!-- Texte -->
+              <div class="col-md-6 order-md-2">
+                <div class="row justify-content-end">
+                  <div class="col-md-11 mb-4 mb-md-0">
+                    <span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">
+                      À propos de nous
+                    </span>
+                    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="100">
+                      Depuis plus de 20 ans, ACEP Burkina soutient l’initiative et la croissance des entrepreneurs locaux
+                    </h2>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                      <p>
+                        ACEP Burkina est une institution de microfinance engagée à offrir des produits financiers adaptés 
+                        aux micro, petites et moyennes entreprises ainsi qu’aux particuliers. 
+                      </p>
+                      <p>
+                        Notre proximité avec nos clients et notre compréhension des réalités locales nous permettent de proposer 
+                        des solutions simples, rapides et sécurisées pour accompagner chaque projet.
+                      </p>
+                    </div>
+                    <h4 class="small fw-bold mt-4 mb-3" data-aos="fade-up" data-aos-delay="300">
+                      Nos valeurs et notre vision
+                    </h4>
+                    <ul class="d-flex flex-row flex-wrap list-unstyled gap-3 features" data-aos="fade-up" data-aos-delay="400">
+                      <li class="d-flex align-items-center gap-2">
+                        <span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span>
+                        <span class="text">Proximité</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-2">
+                        <span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span>
+                        <span class="text">Fiabilité</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-2">
+                        <span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span>
+                        <span class="text">Innovation adaptée</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-2">
+                        <span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span>
+                        <span class="text">Transparence</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-2">
+                        <span class="icon rounded-circle text-center"><i class="bi bi-check"></i></span>
+                        <span class="text">Impact social</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image + Mission -->
+              <div class="col-md-6"> 
+                <div class="img-wrap position-relative">
+                  <img class="img-fluid rounded-4" src="assets/images/about2.jpg" alt="Client ACEP au Burkina Faso" data-aos="fade-up" data-aos-delay="0">
+                  <div class="mission-statement p-4 rounded-4 d-flex gap-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-icon text-center rounded-circle"><i class="bi bi-lightbulb fs-4"></i></div>
+                    <div>
+                      <h3 class="text-uppercase fw-bold">Notre mission</h3>
+                      <p class="fs-5 mb-0">
+                        Offrir à chaque client un service financier accessible, rapide et sûr, pour stimuler l’économie locale et améliorer les conditions de vie.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- End About-->
+
+        
+         <!-- ======= Features =======-->
+        <section class="section features__v2" id="features">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-lg-flex p-5 rounded-4 content" data-aos="fade-in" data-aos-delay="0">
+                  <div class="row">
+                    <!-- Texte principal -->
+                    <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+                      <div class="row"> 
+                        <div class="col-lg-11">
+                          <div class="h-100 flex-column justify-content-between d-flex">
+                            <div>
+                              <h2 class="mb-4">Pourquoi choisir ACEP Burkina ?</h2>
+                              <p class="mb-5">
+                                Depuis plus de deux décennies, nous offrons aux entrepreneurs, commerçants et particuliers 
+                                des solutions de financement fiables, rapides et accessibles.  
+                                Notre approche repose sur la proximité, la transparence et l’innovation adaptée aux besoins locaux.
+                              </p>
+                            </div>
+                            <div class="align-self-start">
+                              <a class="glightbox btn btn-play d-inline-flex align-items-center gap-2" 
+                                href="https://www.youtube.com/watch?v=VIDEO_ACEP" data-gallery="video">
+                                <i class="bi bi-play-fill"></i> Voir notre vidéo
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Blocs d'avantages -->
+                    <div class="col-lg-7">
+                      <div class="row justify-content-end">
+                        <div class="col-lg-11">
+                          <div class="row">
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="0">
+                              <div class="icon text-center mb-4"><i class="bi bi-person-check fs-4"></i></div>
+                              <h3 class="fs-6 fw-bold mb-3">Accompagnement personnalisé</h3>
+                              <p>Des conseillers proches de vous pour étudier vos besoins et vous proposer la meilleure solution.</p>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="icon text-center mb-4"><i class="bi bi-graph-up fs-4"></i></div>
+                              <h3 class="fs-6 fw-bold mb-3">Financement flexible</h3>
+                              <p>Crédits adaptés à votre activité, avec des conditions souples et un traitement rapide.</p>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                              <div class="icon text-center mb-4"><i class="bi bi-headset fs-4"></i></div>
+                              <h3 class="fs-6 fw-bold mb-3">Support réactif</h3>
+                              <p>Un service client disponible dans nos agences, par téléphone et via nos canaux digitaux.</p>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                              <div class="icon text-center mb-4"><i class="bi bi-shield-lock fs-4"></i></div>
+                              <h3 class="fs-6 fw-bold mb-3">Sécurité et confiance</h3>
+                              <p>Transactions sécurisées et confidentialité garantie pour protéger vos données et vos fonds.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Features-->
+
+        
+       <!-- ======= Tarifs et Offres =======-->
+      <section class="section pricing__v2" id="pricing">
+        <div class="container">
+          <!-- Titre et intro -->
+          <div class="row mb-5">
+            <div class="col-md-6 mx-auto text-center">
+              <span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Nos Offres</span>
+              <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">Des solutions pour chaque besoin</h2>
+              <p data-aos="fade-up" data-aos-delay="200">
+                Que vous soyez entrepreneur, commerçant ou particulier, ACEP Burkina vous propose des financements adaptés, simples et rapides.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Offre 1 -->
+            <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+              <div class="p-5 rounded-4 price-table h-100">
+                <h3>Microcrédit</h3>
+                <p>Pour les petits commerçants, artisans et activités génératrices de revenus. Montant accessible et remboursement flexible.</p>
+                <div class="price mb-4"><strong>À partir de 50 000 FCFA</strong></div>
+                <div><a class="btn" href="contact.html">Faire une demande</a></div>
+              </div>
+            </div>
+
+            <!-- Offre 2 (populaire) -->
+            <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+              <div class="p-5 rounded-4 price-table popular h-100">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3 class="mb-3">Crédit PME</h3>
+                    <p>Financement sur mesure pour développer ou renforcer votre activité professionnelle.</p>
+                    <div class="price mb-4"><strong class="me-1">Jusqu’à 20 millions FCFA</strong></div>
+                    <div><a class="btn btn-white hover-outline" href="contact.html">Faire une demande</a></div>
+                  </div>
+                  <div class="col-md-6 pricing-features">
+                    <h4 class="text-uppercase fw-bold mb-3">Avantages</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                      <li class="d-flex gap-2 align-items-start mb-0">
+                        <span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span>
+                        <span>Montants et durées adaptés à votre activité</span>
+                      </li>
+                      <li class="d-flex gap-2 align-items-start mb-0">
+                        <span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span>
+                        <span>Décaissement rapide après validation du dossier</span>
+                      </li>
+                      <li class="d-flex gap-2 align-items-start mb-0">
+                        <span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span>
+                        <span>Possibilité de remboursement anticipé sans pénalité</span>
+                      </li>
+                      <li class="d-flex gap-2 align-items-start mb-0">
+                        <span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span>
+                        <span>Accompagnement et suivi personnalisés</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End Tarifs et Offres -->
+
+        
+        <!-- ======= Comment ça marche =======-->
+        <section class="section howitworks__v1" id="how-it-works">
+          <div class="container">
+            <!-- Titre et intro -->
+            <div class="row mb-5">
+              <div class="col-md-6 text-center mx-auto">
+                <span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Procédure</span>
+                <h2 data-aos="fade-up" data-aos-delay="100">Comment ça marche ?</h2>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  Obtenir un crédit ou un service chez ACEP Burkina est simple et rapide. Suivez ces étapes :
+                </p>
+              </div>
+            </div>
+
+            <!-- Étapes -->
+            <div class="row g-md-5">
+              <!-- Étape 1 -->
+              <div class="col-md-6 col-lg-3">
+                <div class="step-card text-center h-100 d-flex flex-column justify-content-start position-relative" data-aos="fade-up" data-aos-delay="0">
+                  <div data-aos="fade-right" data-aos-delay="500">
+                    <img class="arch-line" src="assets/images/arch-line.svg" alt="">
+                  </div>
+                  <span class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">1</span>
+                  <div>
+                    <h3 class="fs-5 mb-4">Prendre Contact</h3>
+                    <p>Rendez-vous dans l’une de nos agences ou contactez-nous en ligne pour exprimer votre besoin.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Étape 2 -->
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="step-card reverse text-center h-100 d-flex flex-column justify-content-start position-relative">
+                  <div data-aos="fade-right" data-aos-delay="1100">
+                    <img class="arch-line reverse" src="assets/images/arch-line-reverse.svg" alt="">
+                  </div>
+                  <span class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">2</span>
+                  <h3 class="fs-5 mb-4">Constitution du dossier</h3>
+                  <p>Fournissez les pièces nécessaires : pièce d’identité, justificatifs d’activité et revenus, etc.</p>
+                </div>
+              </div>
+
+              <!-- Étape 3 -->
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1200">
+                <div class="step-card text-center h-100 d-flex flex-column justify-content-start position-relative">
+                  <div data-aos="fade-right" data-aos-delay="1700">
+                    <img class="arch-line" src="assets/images/arch-line.svg" alt="">
+                  </div>
+                  <span class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">3</span>
+                  <h3 class="fs-5 mb-4">Analyse et Validation</h3>
+                  <p>Nos experts étudient votre demande et vous informent de la décision dans les meilleurs délais.</p>
+                </div>
+              </div>
+
+              <!-- Étape 4 -->
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1800">
+                <div class="step-card last text-center h-100 d-flex flex-column justify-content-start position-relative">
+                  <span class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">4</span>
+                  <div>
+                    <h3 class="fs-5 mb-4">Décaissement et Suivi</h3>
+                    <p>Une fois approuvé, recevez votre financement et bénéficiez d’un accompagnement personnalisé.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Comment ça marche -->
+
+        <!-- ======= Simuler credit =======-->
+         <!-- ======= Simulateurs =======-->
+          <section id="simulateur-credit" class="section bg-light py-5">
+            <div class="container">
+              <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Simulez votre Crédit ou DAT</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                  Estimez rapidement vos mensualités de crédit ou vos gains sur un dépôt à terme.
+                </p>
+              </div>
+
+              <div class="row g-4">
+                
+                <!-- Simulateur Crédit -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                  <form id="creditForm" class="p-4 bg-white shadow rounded">
+                    <h4 class="mb-3">Simulation Crédit</h4>
+                    <div class="mb-3">
+                      <label for="montant" class="form-label">Montant du crédit (FCFA)</label>
+                      <input type="number" class="form-control" id="montant" placeholder="Ex: 5 000 000" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="duree" class="form-label">Durée (mois)</label>
+                      <input type="number" class="form-control" id="duree" placeholder="Ex: 36" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="taux" class="form-label">Taux d'intérêt annuel (%)</label>
+                      <input type="number" class="form-control" id="taux" step="0.1" placeholder="Ex: 8" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Calculer</button>
+                  </form>
+
+                  <div id="resultat" class="p-4 bg-white shadow rounded text-center mt-3">
+                    <h5 class="mb-3">Résultats Crédit</h5>
+                    <p><strong>Mensualité :</strong> <span id="mensualite">-</span> FCFA</p>
+                    <p><strong>Intérêts totaux :</strong> <span id="interets">-</span> FCFA</p>
+                    <p><strong>Coût total :</strong> <span id="total">-</span> FCFA</p>
+                    <a href="#contact_" class="btn btn-outline-primary mt-2">Demander ce crédit</a>
+                  </div>
+                </div>
+
+                <!-- Simulateur DAT -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                  <form id="datForm" class="p-4 bg-white shadow rounded">
+                    <h4 class="mb-3">Simulation Dépôt à Terme (DAT)</h4>
+                    <div class="mb-3">
+                      <label for="montantDAT" class="form-label">Montant du dépôt (FCFA)</label>
+                      <input type="number" class="form-control" id="montantDAT" placeholder="Ex: 1 000 000" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="dureeDAT" class="form-label">Durée (mois)</label>
+                      <input type="number" class="form-control" id="dureeDAT" placeholder="Ex: 12" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="tauxDAT" class="form-label">Taux d'intérêt annuel (%)</label>
+                      <input type="number" class="form-control" id="tauxDAT" step="0.1" placeholder="Ex: 5" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Calculer</button>
+                  </form>
+
+                  <div id="resultatDAT" class="p-4 bg-white shadow rounded text-center mt-3">
+                    <h5 class="mb-3">Résultats DAT</h5>
+                    <p><strong>Gain total :</strong> <span id="gainDAT">-</span> FCFA</p>
+                    <p><strong>Capital final :</strong> <span id="capitalDAT">-</span> FCFA</p>
+                    <a href="#contact_" class="btn btn-outline-primary mt-2">Ouvrir un DAT</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <!-- End Simulateurs -->
+          <!-- ===== Modal Demande ===== -->
+          <div class="modal fade" id="demandeModal" tabindex="-1" aria-labelledby="demandeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  <h5 class="modal-title" id="demandeModalLabel">Demande en ligne</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                
+                <div class="modal-body">
+                  <form id="demandeForm">
+                    <!-- Type de produit -->
+                    <div class="mb-3">
+                      <label for="typeProduit" class="form-label">Type de produit</label>
+                      <input type="text" class="form-control" id="typeProduit" readonly>
+                    </div>
+
+                    <!-- Résultat simulation -->
+                    <div class="mb-3">
+                      <label for="detailsSimulation" class="form-label">Détails de la simulation</label>
+                      <textarea class="form-control" id="detailsSimulation" rows="3" readonly></textarea>
+                    </div>
+
+                    <!-- Nom -->
+                    <div class="mb-3">
+                      <label for="nom" class="form-label">Votre nom</label>
+                      <input type="text" class="form-control" id="nom" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Votre email</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="mb-3">
+                      <label for="telephone" class="form-label">Votre téléphone</label>
+                      <input type="tel" class="form-control" id="telephone" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Envoyer ma demande</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- ======= Statistiques =======-->
+        <section class="stats__v3 section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex flex-wrap content rounded-4" data-aos="fade-up" data-aos-delay="0">
+                  <div class="rounded-borders">
+                    <div class="rounded-border-1"></div>
+                    <div class="rounded-border-2"></div>
+                    <div class="rounded-border-3"></div>
+                  </div>
+
+                  <!-- Nombre de clients -->
+                  <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                      <h3 class="fs-1 fw-bold">
+                        <span class="purecounter" data-purecounter-start="0" data-purecounter-end="25000" data-purecounter-duration="2">0</span>+
+                      </h3>
+                      <p class="mb-0">Clients actifs</p>
+                    </div>
+                  </div>
+
+                  <!-- Montant total des prêts -->
+                  <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                      <h3 class="fs-1 fw-bold">
+                        <span class="purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="2">0</span>
+                        <span>M+</span>
+                      </h3>
+                      <p class="mb-0">Montant total prêté (FCFA)</p>
+                    </div>
+                  </div>
+
+                  <!-- Taux de remboursement -->
+                  <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                      <h3 class="fs-1 fw-bold">
+                        <span class="purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2">0</span>%
+                      </h3>
+                      <p class="mb-0">Taux de remboursement</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Statistiques -->
+
+        
+        <!-- ======= Services =======-->
+        <section class="section services__v3" id="services">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-md-8 mx-auto text-center">
+                <span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Nos Services</span>
+                <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">
+                  Offrir des solutions financières adaptées pour soutenir l'entrepreneuriat et le développement local
+                </h2>
+              </div>
+            </div>
+            <div class="row g-4">
+              
+              <!-- Service 1 -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div>
+                    <span class="icon mb-4">💳</span>
+                    <h3 class="fs-5 mb-3">Microcrédits</h3>
+                    <p class="mb-4">
+                      Financement rapide et accessible pour les commerçants, artisans et entrepreneurs, afin de soutenir leurs activités et projets.
+                    </p>
+                  </div>
+                  <a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="#">
+                    <span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"></i></span>
+                    <span>En savoir plus</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div>
+                    <span class="icon mb-4">🏦</span>
+                    <h3 class="fs-5 mb-3">Crédits PME</h3>
+                    <p class="mb-4">
+                      Solutions de financement adaptées aux petites et moyennes entreprises pour favoriser leur croissance et leur compétitivité.
+                    </p>
+                  </div>
+                  <a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="#">
+                    <span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"></i></span>
+                    <span>En savoir plus</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div>
+                    <span class="icon mb-4">📲</span>
+                    <h3 class="fs-5 mb-3">Services financiers digitaux</h3>
+                    <p class="mb-4">
+                      Paiements, transferts et consultations de comptes via mobile banking pour plus de rapidité et de confort.
+                    </p>
+                  </div>
+                  <a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="#">
+                    <span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"></i></span>
+                    <span>En savoir plus</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div>
+                    <span class="icon mb-4">📈</span>
+                    <h3 class="fs-5 mb-3">Épargne sécurisée</h3>
+                    <p class="mb-4">
+                      Comptes d’épargne flexibles et rémunérés pour sécuriser vos fonds et préparer vos projets.
+                    </p>
+                  </div>
+                  <a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="#">
+                    <span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"></i></span>
+                    <span>En savoir plus</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div>
+                    <span class="icon mb-4">🤝</span>
+                    <h3 class="fs-5 mb-3">Assistance & Formation</h3>
+                    <p class="mb-4">
+                      Programmes de formation et accompagnement pour aider les clients à mieux gérer leurs finances et développer leur activité.
+                    </p>
+                  </div>
+                  <a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="#">
+                    <span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"></i></span>
+                    <span>En savoir plus</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 6 -->
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
+                  <div>
+                    <span class="icon mb-4">🛡️</span>
+                    <h3 class="fs-5 mb-3">Micro-assurance</h3>
+                    <p class="mb-4">
+                      Produits d’assurance accessibles pour protéger vos biens, votre santé et vos proches à moindre coût.
+                    </p>
+                  </div>
+                  <a class="special-link d-inline-flex gap-2 align-items-center text-decoration-none" href="#">
+                    <span class="icons"><i class="icon-1 bi bi-arrow-right-short"></i><i class="icon-2 bi bi-arrow-right-short"></i></span>
+                    <span>En savoir plus</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- End Services -->
+        <!-- ======= Nos Agences ======= -->
+        <section id="agences" class="section bg-light py-5">
+          <div class="container">
+            <div class="text-center mb-4">
+              <h2 class="section-title" data-aos="fade-up" data-aos-delay="0">Nos Agences</h2>
+              <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Trouvez l’agence la plus proche et découvrez ses horaires et services</p>
+            </div>
+
+            <!-- Filtre par ville -->
+            <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-md-6 mx-auto">
+                <select id="villeSelect" class="form-select">
+                  <option value="all">Toutes les villes</option>
+                  <option value="Ouagadougou">Ouagadougou</option>
+                  <option value="Bobo-Dioulasso">Bobo-Dioulasso</option>
+                  <option value="Koudougou">Koudougou</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Carte -->
+            <div id="mapAgences" style="height: 500px;" class="rounded shadow" data-aos="fade-up" data-aos-delay="300"></div>
+          </div>
+        </section>
+
+
+        
+         <!-- ======= Témoignages =======-->
+          <section class="section testimonials__v2" id="temoignages">
+            <div class="container">
+              <div class="row mb-5">
+                <div class="col-lg-5 mx-auto text-center">
+                  <span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Témoignages</span>
+                  <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">Ce que disent nos clients</h2>
+                  <p data-aos="fade-up" data-aos-delay="200">
+                    Des histoires vraies de réussite et de satisfaction grâce à l’accompagnement de ACEP Burkina.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row g-4" data-masonry='{"percentPosition": true }'>
+                
+                <!-- Témoignage 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                  <div class="testimonial rounded-4 p-4">
+                    <blockquote class="mb-3">
+                      &ldquo;Grâce au prêt ACEP, j’ai pu agrandir mon magasin et augmenter mon stock. Aujourd’hui, mes ventes ont doublé et je peux subvenir aux besoins de ma famille.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author d-flex gap-3 align-items-center">
+                      <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-2-min.jpg" alt="client"></div>
+                      <div class="lh-base"><strong class="d-block">Awa Traoré</strong><span>Commerçante</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="testimonial rounded-4 p-4">
+                    <blockquote class="mb-3">
+                      &ldquo;Avec le financement reçu, j’ai acheté une machine de transformation. Cela m’a permis de tripler ma production et d’employer deux jeunes du village.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author d-flex gap-3 align-items-center">
+                      <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-1-min.jpg" alt="client"></div>
+                      <div class="lh-base"><strong class="d-block">Salif Ouédraogo</strong><span>Transformateur agroalimentaire</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                  <div class="testimonial rounded-4 p-4">
+                    <blockquote class="mb-3">
+                      &ldquo;ACEP m’a aidé à moderniser mon atelier de couture. Aujourd’hui, je reçois plus de commandes et je peux même former des apprentis.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author d-flex gap-3 align-items-center">
+                      <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-5-min.jpg" alt="client"></div>
+                      <div class="lh-base"><strong class="d-block">Mariam Sawadogo</strong><span>Couturière</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Témoignage 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                  <div class="testimonial rounded-4 p-4">
+                    <blockquote class="mb-3">
+                      &ldquo;Avec l’épargne ACEP, j’ai pu mettre de côté pour acheter un tricycle. Cela me permet aujourd’hui de transporter mes marchandises plus facilement.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author d-flex gap-3 align-items-center">
+                      <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-3-min.jpg" alt="client"></div>
+                      <div class="lh-base"><strong class="d-block">Issouf Kaboré</strong><span>Artisan</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Témoignage 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                  <div class="testimonial rounded-4 p-4">
+                    <blockquote class="mb-3">
+                      &ldquo;Le service mobile banking m’a simplifié la vie. Plus besoin de me déplacer pour faire mes transactions, je gagne du temps et je suis en sécurité.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author d-flex gap-3 align-items-center">
+                      <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-7-min.jpg" alt="client"></div>
+                      <div class="lh-base"><strong class="d-block">Binta Zongo</strong><span>Vendeuse de fruits</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Témoignage 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                  <div class="testimonial rounded-4 p-4">
+                    <blockquote class="mb-3">
+                      &ldquo;ACEP ne m’a pas seulement prêté de l’argent, ils m’ont aussi conseillé sur la gestion de mon activité. Cela a vraiment changé ma façon de travailler.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author d-flex gap-3 align-items-center">
+                      <div class="author-img"><img class="rounded-circle img-fluid" src="assets/images/person-sq-8-min.jpg" alt="client"></div>
+                      <div class="lh-base"><strong class="d-block">Hamid Diallo</strong><span>Entrepreneur</span></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <!-- End Témoignages -->
+
+        
+        <!-- ======= FAQ =======-->
+        <section class="section faq__v2" id="faq">
+          <div class="container">
+            <div class="row mb-4">
+              <div class="col-md-6 col-lg-7 mx-auto text-center">
+                <span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">FAQ</span>
+                <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Questions Fréquemment Posées</h2>
+                <p data-aos="fade-up" data-aos-delay="100">
+                  Retrouvez ici les réponses aux questions les plus courantes sur nos produits et services.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-content">
+                  <div class="accordion custom-accordion" id="accordionPanelsStayOpenExample">
+
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                          Quels types de crédits propose ACEP Burkina ?
+                        </button>
+                      </h2>
+                      <div class="accordion-collapse collapse show" id="faq1">
+                        <div class="accordion-body">
+                          Nous proposons plusieurs types de crédits adaptés à vos besoins : crédit individuel, crédit groupe, financement agricole, crédit équipement et prêt pour l’extension de votre activité.
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                          Quels sont les documents nécessaires pour obtenir un prêt ?
+                        </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="faq2">
+                        <div class="accordion-body">
+                          Vous aurez besoin d’une pièce d’identité valide, d’un justificatif de domicile, d’un relevé ou carnet d’activité et, selon le type de prêt, d’un garant ou d’une garantie matérielle.
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                          Proposez-vous un service de mobile banking ?
+                        </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="faq3">
+                        <div class="accordion-body">
+                          Oui, ACEP Burkina offre un service de mobile banking qui vous permet de consulter votre solde, effectuer des dépôts, retraits et paiements directement depuis votre téléphone.
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                          Puis-je rembourser mon prêt par anticipation ?
+                        </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="faq4">
+                        <div class="accordion-body">
+                          Oui, le remboursement anticipé est possible. Dans certains cas, cela peut même réduire le coût total de votre crédit. Renseignez-vous auprès de votre conseiller pour connaître les modalités.
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                          Offrez-vous un accompagnement pour la gestion de mon activité ?
+                        </button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="faq5">
+                        <div class="accordion-body">
+                          Oui, ACEP Burkina accompagne ses clients avec des conseils en gestion, des formations et un suivi personnalisé pour assurer la réussite de vos projets.
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End FAQ -->
+
+        
+         <!-- ======= Contact =======-->
+        <section class="section contact__v2" id="contact">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-md-6 col-lg-7 mx-auto text-center">
+                <span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Contact</span>
+                <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Contactez-nous</h2>
+                <p data-aos="fade-up" data-aos-delay="100">
+                  Notre équipe est à votre écoute pour toute demande d’information, de prise de rendez-vous ou d’accompagnement dans vos projets.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              
+              <!-- Coordonnées -->
+              <div class="col-md-6">
+                <div class="d-flex gap-5 flex-column">
+                  <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="0">
+                    <div class="icon d-block"><i class="bi bi-telephone"></i></div>
+                    <span>
+                      <span class="d-block">Téléphone</span>
+                      <strong>+226 25 37 46 00</strong>
+                    </span>
+                  </div>
+                  <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon d-block"><i class="bi bi-send"></i></div>
+                    <span>
+                      <span class="d-block">Email</span>
+                      <strong>contact@acep-bf.com</strong>
+                    </span>
+                  </div>
+                  <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon d-block"><i class="bi bi-geo-alt"></i></div>
+                    <span>
+                      <span class="d-block">Adresse</span>
+                      <address class="fw-bold">
+                        Siège ACEP Burkina, Avenue Kwame N’Krumah<br>
+                        Ouagadougou, Burkina Faso
+                      </address>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Formulaire -->
+              <div class="col-md-6">
+                <div class="form-wrapper" data-aos="fade-up" data-aos-delay="300">
+                  <form id="contactForm">
+                    <div class="row gap-3 mb-3">
+                      <div class="col-md-12">
+                        <label class="mb-2" for="name">Nom complet</label>
+                        <input class="form-control" id="name" type="text" name="name" placeholder="Entrez votre nom" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="mb-2" for="email">Email</label>
+                        <input class="form-control" id="email" type="email" name="email" placeholder="exemple@email.com" required>
+                      </div>
+                    </div>
+                    <div class="row gap-3 mb-3">
+                      <div class="col-md-12">
+                        <label class="mb-2" for="subject">Objet</label>
+                        <input class="form-control" id="subject" type="text" name="subject" placeholder="Objet de votre message">
+                      </div>
+                    </div>
+                    <div class="row gap-3 gap-md-0 mb-3">
+                      <div class="col-md-12">
+                        <label class="mb-2" for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary fw-semibold" type="submit">Envoyer le message</button>
+                  </form>
+                  <div class="mt-3 d-none alert alert-success" id="successMessage">Votre message a été envoyé avec succès !</div>
+                  <div class="mt-3 d-none alert alert-danger" id="errorMessage">Échec de l'envoi. Veuillez réessayer plus tard.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- End Contact -->
+
+        
+        <!-- ======= Footer =======-->
+<footer class="footer pt-5 pb-5">
+  <div class="container">
+    <!-- Newsletter -->
+    <div class="row mb-5 pb-4">
+      <div class="col-md-7">
+        <h2 class="fs-5">Rejoignez notre newsletter</h2>
+        <p>Recevez nos actualités, conseils et offres directement dans votre boîte mail.</p>
+      </div>
+      <div class="col-md-5">
+        <form class="d-flex gap-2">
+          <input class="form-control" type="email" placeholder="Votre adresse email" required="">
+          <button class="btn btn-primary fs-6" type="submit">S'abonner</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Liens & Contact -->
+    <div class="row justify-content-between mb-5 g-xl-5">
+      <div class="col-md-4 mb-5 mb-lg-0">
+        <h3 class="mb-3">À propos de l’ACEP Burkina</h3>
+        <p class="mb-4">
+          ACEP Burkina est une institution de microfinance dédiée au financement et à l’accompagnement
+          des micro, petites et moyennes entreprises au Burkina Faso. Notre mission : promouvoir l’inclusion
+          financière à travers des services accessibles, efficaces et proches de nos clients.
+        </p>
+      </div>
+
+      <div class="col-md-7">
+        <div class="row g-2">
+          <!-- Liens utiles -->
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <h3 class="mb-3">Liens utiles</h3>
+            <ul class="list-unstyled">
+              <li><a href="apropos.html">À propos</a></li>
+              <li><a href="produits.html">Produits & Services</a></li>
+              <li><a href="simulateurs.html">Simulateurs</a></li>
+              <li><a href="actualites.html">Actualités</a></li>
+              <li><a href="carrieres.html">Carrières</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Réseaux sociaux -->
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <h3 class="mb-3">Réseaux sociaux</h3>
+            <ul class="list-unstyled">
+              <li><a href="https://www.facebook.com/acepburkina" target="_blank">Facebook</a></li>
+              <li><a href="#" target="_blank">LinkedIn</a></li>
+              <li><a href="#" target="_blank">WhatsApp</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0 quick-contact">
+            <h3 class="mb-3">Contact</h3>
+            <p class="d-flex mb-3">
+              <i class="bi bi-geo-alt-fill me-3"></i>
+              <span>Siège : Ouagadougou, Burkina Faso</span>
+            </p>
+            <p class="d-flex mb-3">
+              <i class="bi bi-clock-fill me-3"></i>
+              <span>Lundi – Vendredi : 7h30 – 16h</span>
+            </p>
+            <a class="d-flex mb-3" href="mailto:contactclients@acepburkina.com">
+              <i class="bi bi-envelope-fill me-3"></i>
+              <span>contactclients@acepburkina.com</span>
+            </a>
+            <a class="d-flex mb-3" href="tel:+22625414931">
+              <i class="bi bi-telephone-fill me-3"></i>
+              <span>+226 25 41 49 31</span>
+            </a>
+            <a class="d-flex mb-3" href="https://acep-bf.com" target="_blank">
+              <i class="bi bi-globe me-3"></i>
+              <span>www.acep-bf.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="row credits pt-3 border-top pt-4">
+      <div class="col-xl-8 text-center text-xl-start mb-3 mb-xl-0">
+        &copy; <script>document.write(new Date().getFullYear());</script> ACEP Burkina — Tous droits réservés.  
+        <br>ACEP : La réussite à portée de main.
+      </div>
+      <div class="col-xl-4 justify-content-start justify-content-xl-end quick-links d-flex flex-column flex-xl-row text-center text-xl-start gap-1">
+        <span>Nos agences : Ouagadougou | Bobo-Dioulasso | Koudougou | Kaya | Ouahigouya</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+        
+      </main>
+    </div>
+    
+    <!-- ======= Back to Top =======-->
+    <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
+    <!-- End Back to top-->
+    
+    <!-- ======= Javascripts =======-->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/gsap/gsap.min.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/vendors/glightbox/glightbox.min.js"></script>
+    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendors/aos/aos.js"></script>
+    <script src="assets/vendors/purecounter/purecounter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/send_email.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/09/02/12/20250902122207-5KW8100F.js" defer></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        effect: "fade", // can be 'slide', 'fade', 'cube', 'coverflow', 'flip'
+      });
+    // Données fictives d'agences
+    const agences = [
+      {
+        nom: "Agence Ouaga Centre",
+        ville: "Ouagadougou",
+        lat: 12.3714,
+        lng: -1.5197,
+        adresse: "Avenue Kwame Nkrumah, Ouaga",
+        ouverture: "08:00",
+        fermeture: "17:00",
+        tel: "+226 25 30 40 50"
+      },
+      {
+        nom: "Agence Ouaga Nord",
+        ville: "Ouagadougou",
+        lat: 12.4000,
+        lng: -1.5100,
+        adresse: "Quartier Kossodo, Ouaga",
+        ouverture: "09:00",
+        fermeture: "16:00",
+        tel: "+226 25 31 41 51"
+      },
+      {
+        nom: "Agence Bobo Centre",
+        ville: "Bobo-Dioulasso",
+        lat: 11.1784,
+        lng: -4.2979,
+        adresse: "Boulevard de la Révolution, Bobo",
+        ouverture: "08:30",
+        fermeture: "17:30",
+        tel: "+226 20 20 30 40"
+      },
+      {
+        nom: "Agence Koudougou",
+        ville: "Koudougou",
+        lat: 12.2526,
+        lng: -2.3622,
+        adresse: "Rue de l'Indépendance, Koudougou",
+        ouverture: "08:00",
+        fermeture: "17:00",
+        tel: "+226 25 45 67 89"
+      }
+    ];
+
+    let map = L.map('mapAgences').setView([12.3714, -1.5197], 7);
+
+    // Ajouter fond de carte OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Fonction pour afficher les agences filtrées
+    let markers = [];
+    function afficherAgences(ville) {
+      // Supprimer anciens marqueurs
+      markers.forEach(m => map.removeLayer(m));
+      markers = [];
+
+      // Filtrer les agences
+      const data = ville === "all" ? agences : agences.filter(a => a.ville === ville);
+
+      // Ajouter les marqueurs filtrés
+      data.forEach(ag => {
+        let marker = L.marker([ag.lat, ag.lng]).addTo(map);
+        marker.bindPopup(`
+          <strong>${ag.nom}</strong><br>
+          📍 ${ag.adresse}<br>
+          🕒 ${ag.ouverture} - ${ag.fermeture}<br>
+          📞 ${ag.tel}
+        `);
+        markers.push(marker);
+      });
+
+      // Ajuster la vue sur les marqueurs
+      if (markers.length > 0) {
+        let group = new L.featureGroup(markers);
+        map.fitBounds(group.getBounds(), { padding: [50, 50] });
+      }
+    }
+
+    // Filtre changement
+    document.getElementById("villeSelect").addEventListener("change", (e) => {
+      afficherAgences(e.target.value);
+    });
+    // Initialisation
+    afficherAgences("all");
+    $(function(){
+      // ===== Simulateur de Crédit =====
+      $("#creditForm").on("submit", function(e){
+        e.preventDefault();
+
+        let montant = parseFloat($("#montant").val()) || 0;
+        let duree = parseInt($("#duree").val()) || 0;
+        let taux = parseFloat($("#taux").val()) || 0;
+
+        if(montant > 0 && duree > 0 && taux > 0){
+          // taux mensuel
+          let r = (taux/100) / 12;
+          // mensualité (formule annuité)
+          let mensualite = montant * r / (1 - Math.pow(1+r, -duree));
+          let total = mensualite * duree;
+          let interets = total - montant;
+
+          $("#mensualite").text(mensualite.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+          $("#interets").text(interets.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+          $("#total").text(total.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+        } else {
+          alert("Veuillez remplir correctement tous les champs.");
+        }
+      });
+
+
+      // ===== Simulateur de Dépôt à Terme (DAT) =====
+      $("#datForm").on("submit", function(e){
+        e.preventDefault();
+
+        let montantDAT = parseFloat($("#montantDAT").val()) || 0;
+        let dureeDAT = parseInt($("#dureeDAT").val()) || 0;
+        let tauxDAT = parseFloat($("#tauxDAT").val()) || 0;
+
+        if(montantDAT > 0 && dureeDAT > 0 && tauxDAT > 0){
+          // taux mensuel
+          let rDAT = (tauxDAT/100) / 12;
+          // capital final avec intérêts composés
+          let capitalFinal = montantDAT * Math.pow(1 + rDAT, dureeDAT);
+          let gain = capitalFinal - montantDAT;
+
+          $("#capitalDAT").text(capitalFinal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+          $("#gainDAT").text(gain.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+        } else {
+          alert("Veuillez remplir correctement tous les champs.");
+        }
+      });
+    });
+    // Ouvrir le modal avec les résultats Crédit
+    $("#resultat a.btn").on("click", function(e){
+      e.preventDefault();
+
+      let mensualite = $("#mensualite").text();
+      let interets = $("#interets").text();
+      let total = $("#total").text();
+
+      $("#typeProduit").val("Crédit");
+      $("#detailsSimulation").val(
+        "Mensualité: " + mensualite + " FCFA\n" +
+        "Intérêts totaux: " + interets + " FCFA\n" +
+        "Coût total: " + total + " FCFA"
+      );
+
+      $("#demandeModal").modal("show");
+    });
+
+    // Ouvrir le modal avec les résultats DAT
+    $("#resultatDAT a.btn").on("click", function(e){
+      e.preventDefault();
+
+      let gain = $("#gainDAT").text();
+      let capital = $("#capitalDAT").text();
+
+      $("#typeProduit").val("Dépôt à Terme (DAT)");
+      $("#detailsSimulation").val(
+        "Gain total: " + gain + " FCFA\n" +
+        "Capital final: " + capital + " FCFA"
+      );
+
+      $("#demandeModal").modal("show");
+    });
+
+    // Soumission du formulaire de demande
+    $("#demandeForm").on("submit", function(e){
+      e.preventDefault();
+      
+      // Données fictives à envoyer (exemple)
+      let data = {
+        type: $("#typeProduit").val(),
+        details: $("#detailsSimulation").val(),
+        nom: $("#nom").val(),
+        email: $("#email").val(),
+        telephone: $("#telephone").val()
+      };
+
+      console.log("Données envoyées :", data);
+
+      alert("Votre demande a été envoyée avec succès !");
+      $("#demandeModal").modal("hide");
+      this.reset();
+    });
+
+    </script>
+
+    
+    <!-- End JavaScripts-->
+  </body>
+</html>

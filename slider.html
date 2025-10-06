@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Slider</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Slider Container -->
+  <div class="max-w-6xl mx-auto py-10">
+    <div class="swiper rounded-2xl shadow-lg overflow-hidden">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative">
+          <img src="https://picsum.photos/1200/500?random=1" class="w-full h-[500px] object-cover">
+          <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Welcome to Our Platform</h2>
+            <p class="text-lg md:text-xl mb-6">Experience modern design and smooth interaction.</p>
+            <a href="#" class="bg-yellow-500 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative">
+          <img src="https://picsum.photos/1200/500?random=2" class="w-full h-[500px] object-cover">
+          <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Responsive & Mobile Ready</h2>
+            <p class="text-lg md:text-xl mb-6">Swipe with your fingers or use navigation controls.</p>
+            <a href="#" class="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-400">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative">
+          <img src="https://picsum.photos/1200/500?random=3" class="w-full h-[500px] object-cover">
+          <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Clean & Modern UI</h2>
+            <p class="text-lg md:text-xl mb-6">Designed with Tailwind CSS and Swiper.js</p>
+            <a href="#" class="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-400">Explore Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-button-prev text-white"></div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: "fade", // can be 'slide', 'fade', 'cube', 'coverflow', 'flip'
+    });
+  </script>
+</body>
+</html>

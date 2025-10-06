@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slider Actualités – ACEP Burkina Faso</title>
+  <!-- Import de Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 1100px;
+      height: 420px;
+      margin: 50px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .swiper-slide h3 {
+      font-size: 1.4rem;
+      color: #0a3d62;
+      margin: 0 0 10px;
+    }
+
+    .swiper-slide p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 0 15px;
+    }
+
+    .swiper-slide a {
+      text-decoration: none;
+      background: #0056a1;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .swiper-slide a:hover {
+      background: #003c70;
+    }
+
+    /* Pagination & navigation style */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #0056a1;
+    }
+
+    .swiper-pagination-bullet {
+      background: #0056a1;
+      opacity: 0.6;
+    }
+    .swiper-pagination-bullet-active {
+      background: #003c70;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slider principal -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/1000x300?text=Financement+300Mds+FCFA" alt="ACEP Burkina finance 30 000 entreprises"/>
+        <h3>ACEP Burkina finance 30 000 entreprises</h3>
+        <p>Depuis 2012, plus de 300 milliards de FCFA ont été injectés dans l’économie locale pour soutenir les TPE et PME.</p>
+        <a href="#">Lire plus</a>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/1000x300?text=Nouvelle+agence+Ouahigouya" alt="Nouvelle agence Ouahigouya"/>
+        <h3>Ouverture d’une nouvelle agence à Ouahigouya</h3>
+        <p>ACEP Burkina poursuit son expansion pour être plus proche des entrepreneurs.</p>
+        <a href="#">Découvrir</a>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/1000x300?text=Épargne+Projet" alt="Épargne Projet"/>
+        <h3>Lancement du produit « Épargne Projet »</h3>
+        <p>Un produit d’épargne conçu pour accompagner la réalisation de vos projets personnels et professionnels.</p>
+        <a href="#">En savoir plus</a>
+      </div>
+    </div>
+
+    <!-- Pagination et navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Import de Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: 'slide',
+      speed: 600
+    });
+  </script>
+
+</body>
+</html>
