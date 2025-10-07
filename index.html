@@ -39,6 +39,13 @@ License: https://freebootstrap.net/license
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- End Theme Style-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="assets/carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/carousel/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="assets/carousel/css/style.css">
     <!-- ======= Apply theme =======-->
     <script>
       // Apply the theme as early as possible to avoid flicker
@@ -72,29 +79,118 @@ License: https://freebootstrap.net/license
         height: 100%;
         transition: width 6s linear;
       }
+      /* Animation du défilement horizontal */
+      @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+      .animate-marquee {
+        display: inline-block;
+        white-space: nowrap;
+        animation: marquee 18s linear infinite;
+      }
+
+      /* Clignotement doux pour l’icône du téléphone */
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.2); }
+      }
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+      /* Ajustement de la hauteur du slider */
+.js-fullheight {
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+}
+
+.slider-item {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  z-index: 1;
+}
+
+.text {
+  z-index: 2;
+  position: relative;
+  color: #fff;
+}
+
+.text h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #facc15;
+}
+
+.text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.text p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slider-item {
+  background-size: cover;
+  background-position: center;
+  transition: transform 12s ease-in-out;
+}
+
+.owl-item.active .slider-item {
+  transform: scale(1.1);
+}
+.slider-item .overlay {
+  background: linear-gradient(120deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+  animation: lightShift 10s ease-in-out infinite alternate;
+}
+
+@keyframes lightShift {
+  from { background: linear-gradient(120deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)); }
+  to { background: linear-gradient(120deg, rgba(0,0,0,0.4), rgba(0,0,0,0.7)); }
+}
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+}
 
     </style>
   </head>
   <body>
-    
-    <div class="subheader bg-dark text-white py-1">
-          <div class="container d-flex flex-wrap align-items-center justify-content-between">
-            <div class="subheader-agences small">
-              Nos agences : Ouagadougou &nbsp;|&nbsp; Bobo-Dioulasso &nbsp;|&nbsp; Koudougou &nbsp;|&nbsp; Kaya &nbsp;|&nbsp; Ouahigouya
-            </div>
-            <div class="subheader-contact small">
-              Tel : +226 25 41 49 31 &nbsp;|&nbsp; Lun-Ven : 7h30 – 16h &nbsp;|&nbsp; Email : contact@acep-bf.com
-            </div>
-          </div>
+    <!-- ======= Subheader ACEP animé ======= -->
+    <div class="subheader bg-dark text-white py-1 position-relative overflow-hidden">
+      <div class="container d-flex flex-wrap align-items-center justify-content-between animate__animated animate__fadeInDown">
+        <!-- Agences avec effet de défilement horizontal -->
+        <div class="subheader-agences small text-success fw-semibold animate-marquee">
+          Nos agences : Ouagadougou &nbsp;|&nbsp; Bobo-Dioulasso &nbsp;|&nbsp; Koudougou &nbsp;|&nbsp; Kaya &nbsp;|&nbsp; Ouahigouya
         </div>
+        <!-- Contact avec effet de clignotement doux -->
+        <div class="subheader-contact small d-flex align-items-center gap-2">
+          <i class="bi bi-telephone-fill text-warning pulse"></i>
+          <span>Tel : +226 25 41 49 31 &nbsp;|&nbsp; Lun–Ven : 7h30 – 16h &nbsp;|&nbsp; Email : contact@acep-bf.com</span>
+        </div>
+      </div>
+    </div>
+
     <!-- ======= Site Wrap =======-->
     <div class="site-wrap">
           <!-- Subheader (inclus juste après le <header>) -->
-        
       <!-- ======= Header =======-->
       <header class="fbs__net-navbar navbar navbar-expand-lg dark" aria-label="Navigation principale ACEP Burkina">
         <div class="container d-flex align-items-center justify-content-between">
-          
           <!-- Logo -->
           <a class="navbar-brand w-auto" href="index.html" aria-label="ACEP Burkina Accueil">
             <!-- logo dark -->
@@ -103,7 +199,7 @@ License: https://freebootstrap.net/license
             <img class="logo light img-fluid" src="assets/images/logo/log_acep_2.png" alt="Logo ACEP Burkina" width="150">
           </a>
           <!-- End Logo -->
-          
+
           <!-- Menu offcanvas -->
           <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1" aria-labelledby="fbs__net-navbarsLabel">
             <div class="offcanvas-header">
@@ -163,65 +259,67 @@ License: https://freebootstrap.net/license
       <main>
         <!-- Slider -->
         <!-- ======= Slider ACEP amélioré ======= -->
-        <div class="max-w-6xl mx-auto py-5 relative">
-          <div class="swiper rounded-2xl shadow-lg overflow-hidden">
-            <div class="swiper-wrapper">
-
-              <!-- Slide 1 -->
-              <div class="swiper-slide relative" data-swiper-parallax="-200">
-                <img src="assets/images/slider1.jpg" class="w-full h-[550px] object-cover brightness-90 slider-zoom" alt="La réussite à portée de main">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col items-center justify-center text-center text-white px-6">
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown" style="color: azure;">La réussite à portée de main</h2>
-                  <p class="text-lg md:text-xl mb-6 animate__animated animate__fadeInUp animate__delay-1s" style="color: azure;">
-                    ACEP Burkina soutient les entrepreneurs et PME avec des solutions adaptées à chaque projet.
-                  </p>
-                  <a href="apropos.html" class="bg-yellow-500 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400 transition-transform transform hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-2s">
-                    En savoir plus
-                  </a>
-                </div>
-              </div>
-
-              <!-- Slide 2 -->
-              <div class="swiper-slide relative" data-swiper-parallax="-200">
-                <img src="assets/images/slider2.jpg" class="w-full h-[550px] object-cover brightness-90 slider-zoom" alt="Simulez vos projets">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col items-center justify-center text-center text-white px-6">
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown" style="color: azure;">Simulez vos projets en ligne</h2>
-                  <p class="text-lg md:text-xl mb-6 animate__animated animate__fadeInUp animate__delay-1s" style="color: azure;">
-                    Calculez vos mensualités ou vos gains d’épargne directement depuis notre simulateur.
-                  </p>
-                  <a href="simulateurs.html" class="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-400 transition-transform transform hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-2s">
-                    Simuler maintenant
-                  </a>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="swiper-slide relative" data-swiper-parallax="-200">
-                <img src="assets/images/slider3.jpg" class="w-full h-[550px] object-cover brightness-90 slider-zoom" alt="Epargnez avec confiance">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col items-center justify-center text-center text-white px-6">
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown" style="color: azure;">Épargnez avec confiance</h2>
-                  <p class="text-lg md:text-xl mb-6 animate__animated animate__fadeInUp animate__delay-1s" style="color: azure;">
-                    Profitez de nos offres de dépôt à terme à taux préférentiels et sécurisés.
-                  </p>
-                  <a href="produits.html#epargne" class="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-400 transition-transform transform hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-2s">
-                    Découvrir nos offres
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Navigation & Pagination -->
-            <div class="swiper-button-next text-white"></div>
-            <div class="swiper-button-prev text-white"></div>
-            <div class="swiper-pagination"></div>
-
-            <!-- Barre de progression -->
-            <div class="autoplay-progress absolute bottom-0 left-0 w-full h-1 bg-white/20">
-              <span class="progress-bar block h-full bg-yellow-500 w-0"></span>
-            </div>
+        <!-- ======= Slider ACEP ======= -->
+<div class="home-slider owl-carousel js-fullheight">
+  
+  <!-- Slide 1 -->
+  <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="col-md-10 ftco-animate text-center">
+          <div class="text w-100">
+            <h2 class="animate__animated animate__fadeInDown" style="color:rgb(250, 147, 4)">Inclusion Financière Durable</h2>
+            <h1 class="mb-3 animate__animated animate__fadeInUp animate__delay-1s" style="color:rgb(131, 252, 211)">Financer vos projets avec confiance</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:rgb(255, 255, 255)">
+              ACEP Burkina accompagne les entrepreneurs et les petites entreprises pour une croissance inclusive.
+            </p>
+            <a href="apropos.html" class="btn btn-warning text-dark px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Découvrir ACEP</a>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-2.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="col-md-10 ftco-animate text-center">
+          <div class="text w-100">
+            <h2 class="animate__animated animate__fadeInDown" style="color:rgb(250, 147, 4)">Soutenir vos ambitions</h2>
+            <h1 class="mb-3 animate__animated animate__fadeInUp animate__delay-1s" style="color:rgb(131, 252, 211)">Des solutions de crédit sur mesure</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:white">
+              Que vous soyez artisan, commerçant ou PME, nous finançons vos projets à chaque étape.
+            </p>
+            <a href="simulateurs.html" class="btn btn-light text-dark px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Simulez votre crédit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-3.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="col-md-10 ftco-animate text-center">
+          <div class="text w-100">
+            <h2 class="animate__animated animate__fadeInDown">Épargner pour l’avenir</h2>
+            <h1 class="mb-3 animate__animated animate__fadeInUp animate__delay-1s" style="color:rgb(131, 252, 211)">Des placements sûrs et rentables</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:white">
+              Découvrez nos solutions d’épargne et de dépôt à terme à taux attractifs et garantis.
+            </p>
+            <a href="produits.html#epargne" class="btn btn-success text-white px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Voir nos offres</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
         <!-- ======= Hero =======-->
         <section class="hero__v6 section" id="home">
           <div class="container">
@@ -1275,9 +1373,14 @@ License: https://freebootstrap.net/license
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/send_email.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/09/02/12/20250902122207-5KW8100F.js" defer></script>
+    <script src="assets/carousel/js/jquery.min.js"></script>
+    <script src="assets/carousel/js/popper.js"></script>
+    <script src="assets/carousel/js/bootstrap.min.js"></script>
+    <script src="assets/carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/carousel/js/main.js"></script>
     <script>
      var progressBar = document.querySelector(".progress-bar");
 
