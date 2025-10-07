@@ -22,7 +22,7 @@ License: https://freebootstrap.net/license
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
     <!-- End Google Font-->
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- ======= Styles =======-->
     <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -47,6 +47,33 @@ License: https://freebootstrap.net/license
       document.documentElement.setAttribute('data-bs-theme', storedTheme);
       })();
     </script>
+    <style>
+      /* Effet Ken Burns (zoom lent) */
+      .slider-zoom {
+        transition: transform 8s ease-in-out;
+      }
+      .swiper-slide-active .slider-zoom {
+        transform: scale(1.12);
+      }
+
+      /* Barre de progression */
+      .autoplay-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background: rgba(255,255,255,0.3);
+        overflow: hidden;
+      }
+      .autoplay-progress .progress-bar {
+        background: #FACC15; /* Jaune ACEP */
+        width: 0%;
+        height: 100%;
+        transition: width 6s linear;
+      }
+
+    </style>
   </head>
   <body>
     
@@ -137,63 +164,67 @@ License: https://freebootstrap.net/license
       <!-- ======= Main =======-->
       <main>
         <!-- Slider -->
-        <div class="max-w-6xl mx-auto py-5">
-          <div class="swiper rounded-2xl shadow-lg overflow-hidden">
-            <div class="swiper-wrapper">
-              
-              <!-- Slide 1 -->
-              <div class="swiper-slide relative">
-                <img src="assets/images/slider1.jpg" class="w-full h-[500px] object-cover" alt="La réussite à portée de main">
-                <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:rgb(220, 253, 217)">La réussite à portée de main</h2>
-                  <p class="text-lg md:text-xl mb-6" style="color:white">
-                    ACEP Burkina vous accompagne avec des solutions financières solides et accessibles.
-                  </p>
-                  <a href="apropos.html" class="bg-yellow-500 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400">
-                    En savoir plus
-                  </a>
-                </div>
-              </div>
+        <!-- ======= Slider ACEP amélioré ======= -->
+<div class="max-w-6xl mx-auto py-5 relative">
+  <div class="swiper rounded-2xl shadow-lg overflow-hidden">
+    <div class="swiper-wrapper">
 
-              <!-- Slide 2 -->
-              <div class="swiper-slide relative">
-                <img src="assets/images/slider2.jpg" class="w-full h-[500px] object-cover" alt="Simulez vos projets">
-                <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:rgb(220, 253, 217)">Simulez vos projets</h2>
-                  <p class="text-lg md:text-xl mb-6" style="color:aliceblue" >
-                    Estimez vos mensualités de crédit ou les gains d’un dépôt à terme en quelques clics.
-                  </p>
-                  <a href="simulateurs.html" class="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-400">
-                    Simuler maintenant
-                  </a>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="swiper-slide relative">
-                <img src="assets/images/slider3.jpg" class="w-full h-[500px] object-cover" alt="Epargnez avec DAT">
-                <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-6">
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:rgb(220, 253, 217)">Épargnez avec DAT sécurisé</h2>
-                  <p class="text-lg md:text-xl mb-6" style="color:aliceblue">
-                    Profitez de nos offres de dépôt à terme avec des rendements transparents et sûrs.
-                  </p>
-                  <a href="produits.html#epargne" class="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-400">
-                    Voir l’épargne
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next text-white"></div>
-            <div class="swiper-button-prev text-white"></div>
-
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
-            
-          </div>
+      <!-- Slide 1 -->
+      <div class="swiper-slide relative" data-swiper-parallax="-200">
+        <img src="assets/images/slider1.jpg" class="w-full h-[550px] object-cover brightness-90 slider-zoom" alt="La réussite à portée de main">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col items-center justify-center text-center text-white px-6">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">La réussite à portée de main</h2>
+          <p class="text-lg md:text-xl mb-6 animate__animated animate__fadeInUp animate__delay-1s">
+            ACEP Burkina soutient les entrepreneurs et PME avec des solutions adaptées à chaque projet.
+          </p>
+          <a href="apropos.html" class="bg-yellow-500 text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400 transition-transform transform hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-2s">
+            En savoir plus
+          </a>
         </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide relative" data-swiper-parallax="-200">
+        <img src="assets/images/slider2.jpg" class="w-full h-[550px] object-cover brightness-90 slider-zoom" alt="Simulez vos projets">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col items-center justify-center text-center text-white px-6">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Simulez vos projets en ligne</h2>
+          <p class="text-lg md:text-xl mb-6 animate__animated animate__fadeInUp animate__delay-1s">
+            Calculez vos mensualités ou vos gains d’épargne directement depuis notre simulateur.
+          </p>
+          <a href="simulateurs.html" class="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-400 transition-transform transform hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-2s">
+            Simuler maintenant
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide relative" data-swiper-parallax="-200">
+        <img src="assets/images/slider3.jpg" class="w-full h-[550px] object-cover brightness-90 slider-zoom" alt="Epargnez avec confiance">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col items-center justify-center text-center text-white px-6">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Épargnez avec confiance</h2>
+          <p class="text-lg md:text-xl mb-6 animate__animated animate__fadeInUp animate__delay-1s">
+            Profitez de nos offres de dépôt à terme à taux préférentiels et sécurisés.
+          </p>
+          <a href="produits.html#epargne" class="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-400 transition-transform transform hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-2s">
+            Découvrir nos offres
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation & Pagination -->
+    <div class="swiper-button-next text-white"></div>
+    <div class="swiper-button-prev text-white"></div>
+    <div class="swiper-pagination"></div>
+
+    <!-- Barre de progression -->
+    <div class="autoplay-progress absolute bottom-0 left-0 w-full h-1 bg-white/20">
+      <span class="progress-bar block h-full bg-yellow-500 w-0"></span>
+    </div>
+  </div>
+</div>
+
 
         <!-- ======= Hero =======-->
         <section class="hero__v6 section" id="home">
@@ -1252,22 +1283,35 @@ License: https://freebootstrap.net/license
     <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/09/02/12/20250902122207-5KW8100F.js" defer></script>
     <script>
-      const swiper = new Swiper('.swiper', {
-        loop: true,
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
+     var progressBar = document.querySelector(".progress-bar");
+
+    var swiper = new Swiper(".swiper", {
+      loop: true,
+      speed: 1000,
+      effect: "fade",
+      parallax: true,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressBar.style.width = `${(1 - progress) * 100}%`;
         },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+        slideChange() {
+          progressBar.style.width = "0%";
         },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        effect: "fade", // can be 'slide', 'fade', 'cube', 'coverflow', 'flip'
-      });
+      },
+    });
     // Données fictives d'agences
     const agences = [
       {
