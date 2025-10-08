@@ -55,30 +55,7 @@ License: https://freebootstrap.net/license
       })();
     </script>
     <style>
-      /* Effet Ken Burns (zoom lent) */
-      .slider-zoom {
-        transition: transform 8s ease-in-out;
-      }
-      .swiper-slide-active .slider-zoom {
-        transform: scale(1.12);
-      }
-
-      /* Barre de progression */
-      .autoplay-progress {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 4px;
-        width: 100%;
-        background: rgba(255,255,255,0.3);
-        overflow: hidden;
-      }
-      .autoplay-progress .progress-bar {
-        background: #FACC15; /* Jaune ACEP */
-        width: 0%;
-        height: 100%;
-        transition: width 6s linear;
-      }
+     
       /* Animation du défilement horizontal */
       @keyframes marquee {
         0% { transform: translateX(100%); }
@@ -89,83 +66,102 @@ License: https://freebootstrap.net/license
         white-space: nowrap;
         animation: marquee 18s linear infinite;
       }
-
-      /* Clignotement doux pour l’icône du téléphone */
-      @keyframes pulse {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.7; transform: scale(1.2); }
-      }
-      .pulse {
-        animation: pulse 2s infinite;
-      }
+      
       /* Ajustement de la hauteur du slider */
-.js-fullheight {
-  height: 100vh;
-  min-height: 600px;
-  position: relative;
-}
+      .js-fullheight {
+        height: 100vh;
+        min-height: 600px;
+        position: relative;
+      }
 
-.slider-item {
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-}
+      .slider-item {
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+      }
 
-.overlay {
-  background: rgba(0, 0, 0, 0.55);
-  position: absolute;
-  top: 0; left: 0;
-  right: 0; bottom: 0;
-  z-index: 1;
-}
+      .overlay {
+        background: rgba(0, 0, 0, 0.55);
+        position: absolute;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        z-index: 1;
+      }
 
-.text {
-  z-index: 2;
-  position: relative;
-  color: #fff;
-}
+      .text {
+        z-index: 2;
+        position: relative;
+        color: #fff;
+      }
 
-.text h2 {
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: #facc15;
-}
+      .text h2 {
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: #facc15;
+      }
 
-.text h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
+      .text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
 
-.text p {
-  max-width: 600px;
-  margin: 0 auto;
-}
+      .text p {
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
-.slider-item {
-  background-size: cover;
-  background-position: center;
-  transition: transform 12s ease-in-out;
-}
+      .slider-item {
+        background-size: cover;
+        background-position: center;
+        transition: transform 12s ease-in-out;
+      }
 
-.owl-item.active .slider-item {
-  transform: scale(1.1);
-}
-.slider-item .overlay {
-  background: linear-gradient(120deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
-  animation: lightShift 10s ease-in-out infinite alternate;
-}
+      .owl-item.active .slider-item {
+        transform: scale(1.1);
+      }
+      .slider-item .overlay {
+        background: linear-gradient(120deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+        animation: lightShift 10s ease-in-out infinite alternate;
+      }
 
-@keyframes lightShift {
-  from { background: linear-gradient(120deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)); }
-  to { background: linear-gradient(120deg, rgba(0,0,0,0.4), rgba(0,0,0,0.7)); }
-}
-.btn {
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
-}
+      @keyframes lightShift {
+        from { background: linear-gradient(120deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)); }
+        to { background: linear-gradient(120deg, rgba(0,0,0,0.4), rgba(0,0,0,0.7)); }
+      }
+      .btn {
+        transition: all 0.3s ease;
+      }
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+      }
+
+      /* Ajustement global */
+      .js-fullheight { height: 100vh; min-height: 600px; position: relative; }
+      .slider-item { background-size: cover; background-position: center; position: relative; transition: transform 12s ease-in-out; }
+      .overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.55); z-index: 1; animation: overlayGlow 8s ease-in-out infinite alternate; }
+
+      .text { z-index: 2; position: relative; color: #fff; }
+      .text h1 { font-size: 3rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.4); }
+      .text h2 { font-weight: 300; letter-spacing: 1px; color: #facc15; }
+
+      /* Ken Burns */
+      .owl-item.active .slider-item { transform: scale(1.12); }
+
+      /* Animation de l’overlay */
+      @keyframes overlayGlow {
+        0% { background: rgba(0,0,0,0.55); }
+        100% { background: rgba(0,0,0,0.35); }
+      }
+
+      /* CTA dynamique */
+      .btn {
+        transition: all 0.3s ease-in-out;
+      }
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+      }
 
     </style>
   </head>
@@ -260,66 +256,66 @@ License: https://freebootstrap.net/license
         <!-- Slider -->
         <!-- ======= Slider ACEP amélioré ======= -->
         <!-- ======= Slider ACEP ======= -->
-<div class="home-slider owl-carousel js-fullheight">
-  
-  <!-- Slide 1 -->
-  <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-1.jpg');">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-        <div class="col-md-10 ftco-animate text-center">
-          <div class="text w-100">
-            <h2 class="animate__animated animate__fadeInDown" style="color:rgb(250, 147, 4)">Inclusion Financière Durable</h2>
-            <h1 class="mb-3 animate__animated animate__fadeInUp animate__delay-1s" style="color:rgb(131, 252, 211)">Financer vos projets avec confiance</h1>
-            <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:rgb(255, 255, 255)">
-              ACEP Burkina accompagne les entrepreneurs et les petites entreprises pour une croissance inclusive.
-            </p>
-            <a href="apropos.html" class="btn btn-warning text-dark px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Découvrir ACEP</a>
+        <div class="home-slider owl-carousel js-fullheight">
+          
+          <!-- Slide 1 -->
+          <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-1.jpg');">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                <div class="col-md-10 ftco-animate text-center">
+                  <div class="text w-100">
+                    <h2 class="animate__animated animate__fadeInDown" style="color:rgb(250, 147, 4)">Inclusion Financière Durable</h2>
+                    <h1 class="mb-3 animate__animated animate__flipInX animate__delay-1s" style="color:rgb(131, 252, 211)">Financer vos projets avec confiance</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:rgb(255, 255, 255)">
+                      ACEP Burkina accompagne les entrepreneurs et les petites entreprises pour une croissance inclusive.
+                    </p>
+                    <a href="apropos.html" class="btn btn-warning text-dark px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Découvrir ACEP</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Slide 2 -->
-  <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-2.jpg');">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-        <div class="col-md-10 ftco-animate text-center">
-          <div class="text w-100">
-            <h2 class="animate__animated animate__fadeInDown" style="color:rgb(250, 147, 4)">Soutenir vos ambitions</h2>
-            <h1 class="mb-3 animate__animated animate__fadeInUp animate__delay-1s" style="color:rgb(131, 252, 211)">Des solutions de crédit sur mesure</h1>
-            <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:white">
-              Que vous soyez artisan, commerçant ou PME, nous finançons vos projets à chaque étape.
-            </p>
-            <a href="simulateurs.html" class="btn btn-light text-dark px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Simulez votre crédit</a>
+          <!-- Slide 2 -->
+          <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-2.jpg');">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                <div class="col-md-10 ftco-animate text-center">
+                  <div class="text w-100">
+                    <h2 class="animate__animated animate__fadeInDown" style="color:rgb(250, 147, 4)">Soutenir vos ambitions</h2>
+                    <h1 class="mb-3 animate__animated animate__flipInX animate__delay-1s" style="color:rgb(131, 252, 211)">Des solutions de crédit sur mesure</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:white">
+                      Que vous soyez artisan, commerçant ou PME, nous finançons vos projets à chaque étape.
+                    </p>
+                    <a href="simulateurs.html" class="btn btn-light text-dark px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Simulez votre crédit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Slide 3 -->
-  <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-3.jpg');">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-        <div class="col-md-10 ftco-animate text-center">
-          <div class="text w-100">
-            <h2 class="animate__animated animate__fadeInDown">Épargner pour l’avenir</h2>
-            <h1 class="mb-3 animate__animated animate__fadeInUp animate__delay-1s" style="color:rgb(131, 252, 211)">Des placements sûrs et rentables</h1>
-            <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:white">
-              Découvrez nos solutions d’épargne et de dépôt à terme à taux attractifs et garantis.
-            </p>
-            <a href="produits.html#epargne" class="btn btn-success text-white px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Voir nos offres</a>
+          <!-- Slide 3 -->
+          <div class="slider-item js-fullheight" style="background-image:url('assets/carousel/images/slider/slider-3.jpg');">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                <div class="col-md-10 ftco-animate text-center">
+                  <div class="text w-100">
+                    <h2 class="animate__animated animate__fadeInDown">Épargner pour l’avenir</h2>
+                    <h1 class="mb-3 animate__animated animate__flipInX animate__delay-1s" style="color:rgb(131, 252, 211)">Des placements sûrs et rentables</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-2s" style="color:white">
+                      Découvrez nos solutions d’épargne et de dépôt à terme à taux attractifs et garantis.
+                    </p>
+                    <a href="produits.html#epargne" class="btn btn-success text-white px-4 py-2 rounded-pill mt-3 animate__animated animate__fadeInUp animate__delay-3s">Voir nos offres</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
+        <br>
         <!-- ======= Hero =======-->
         <section class="hero__v6 section" id="home">
           <div class="container">
@@ -1382,35 +1378,7 @@ License: https://freebootstrap.net/license
     <script src="assets/carousel/js/owl.carousel.min.js"></script>
     <script src="assets/carousel/js/main.js"></script>
     <script>
-     var progressBar = document.querySelector(".progress-bar");
-
-    var swiper = new Swiper(".swiper", {
-      loop: true,
-      speed: 1000,
-      effect: "fade",
-      parallax: true,
-      autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      on: {
-        autoplayTimeLeft(s, time, progress) {
-          progressBar.style.width = `${(1 - progress) * 100}%`;
-        },
-        slideChange() {
-          progressBar.style.width = "0%";
-        },
-      },
-    });
+    
     // Données fictives d'agences
     const agences = [
       {
@@ -1501,7 +1469,6 @@ License: https://freebootstrap.net/license
       // ===== Simulateur de Crédit =====
       $("#creditForm").on("submit", function(e){
         e.preventDefault();
-
         let montant = parseFloat($("#montant").val()) || 0;
         let duree = parseInt($("#duree").val()) || 0;
         let taux = parseFloat($("#taux").val()) || 0;
